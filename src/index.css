@@ -1,0 +1,231 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+.custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 3px; }
+.custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #a8a8a8; }
+
+/* Header layout */
+.header-search { max-width: 260px !important; }
+.main-menu { display: flex !important; flex-wrap: nowrap !important; margin: 0 !important; padding: 0 !important; }
+.main-menu > li { margin-right: 18px !important; padding: 0 !important; }
+.main-menu > li > a { font-size: 14px !important; padding: 8px 0 !important; white-space: nowrap !important; }
+.header-nav { padding-left: 15px !important; padding-right: 15px !important; }
+
+/* ---- Burger Icon ---- */
+/* Desktop: hide burger */
+.burger-icon { display: none !important; }
+
+/* Mobile/Tablet (< 1200px): show burger, hide desktop nav */
+@media (max-width: 1199px) {
+  .burger-icon {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .nav-main-menu {
+    display: none !important;
+  }
+  .header-search {
+    max-width: 180px !important;
+  }
+}
+
+/* Phone (< 576px): hide search bar */
+@media (max-width: 575px) {
+  .header-search {
+    display: none !important;
+  }
+}
+
+
+/* =============================================
+   MOBILE MENU DRAWER — Template-Matching Styles
+   ============================================= */
+
+.mobile-header-active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 360px;
+  max-width: 90vw;
+  height: 100vh;
+  background: #fff;
+  z-index: 9999;
+  overflow-y: auto;
+  box-shadow: 4px 0 30px rgba(0,0,0,0.15);
+  animation: slideInLeft 0.28s ease;
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+
+.mobile-header-wrapper-inner { height: 100%; }
+
+.mobile-header-content-area {
+  padding: 20px 20px 30px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-logo {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e8ecef;
+  margin-bottom: 4px;
+}
+
+.perfect-scroll { flex: 1; overflow-y: auto; }
+.mobile-menu-wrap { padding: 0; }
+
+.mobile-header-border {
+  border-bottom: 1px solid #e8ecef;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+/* Navigation List */
+ul.mobile-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.mobile-menu > li {
+  border-bottom: 1px solid #f0f2f5;
+}
+
+ul.mobile-menu > li > a {
+  display: block;
+  padding: 11px 2px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #253D4E;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+ul.mobile-menu > li > a:hover { color: #1A3DAA; }
+
+/* has-children arrow */
+ul.mobile-menu > li.has-children > a::after {
+  content: "+";
+  float: right;
+  font-size: 16px;
+  font-weight: 700;
+  color: #adb5bd;
+}
+
+/* Sub-menu */
+ul.mobile-menu .sub-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 6px 14px;
+  background: #f8f9fc;
+  border-radius: 4px;
+}
+
+ul.mobile-menu .sub-menu > li { border-bottom: 1px solid #edf0f5; }
+
+ul.mobile-menu .sub-menu > li > a {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4f5d77;
+  padding: 8px 6px;
+  text-decoration: none;
+}
+
+ul.mobile-menu .sub-menu > li > a:hover { color: #1A3DAA; }
+
+/* Account Section */
+.mobile-account { margin-top: 6px; }
+
+.mobile-header-top {
+  padding: 14px 0 10px;
+  border-bottom: 1px solid #e8ecef;
+  margin-bottom: 4px;
+}
+
+.user-account {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-account > a img,
+.user-account img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e8ecef;
+}
+
+.user-account .content h6.user-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #253D4E;
+  margin: 0 0 2px;
+}
+
+.user-account .content .text-brand { color: #1A3DAA; }
+
+.user-account .content p {
+  font-size: 11px;
+  color: #adb5bd;
+  margin: 0;
+}
+
+/* Banner */
+.mobile-banner {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mobile-banner .bg-5 {
+  background: linear-gradient(135deg, #eef2ff 0%, #dde6ff 100%);
+  border: 1px solid #c7d4ff;
+}
+
+.mobile-banner .block-iphone { border-radius: 10px; }
+
+.mobile-banner h3 {
+  color: #253D4E;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.mobile-banner .btn-arrow {
+  display: inline-block;
+  background: #1A3DAA;
+  color: #fff !important;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 20px;
+  border-radius: 4px;
+  text-decoration: none !important;
+  transition: background 0.2s;
+  margin-top: 6px;
+}
+
+.mobile-banner .btn-arrow:hover { background: #0f2580; }
+
+/* Copyright */
+.site-copyright {
+  font-size: 11px;
+  color: #adb5bd;
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 10px;
+  border-top: 1px solid #f0f2f5;
+}

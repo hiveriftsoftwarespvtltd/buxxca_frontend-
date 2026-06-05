@@ -1,0 +1,50 @@
+export const vendors = [
+  {
+    id: 1,
+    name: "BUXAA Official Store",
+    slug: "buxaa-official-store",
+    logo: "/assets/imgs/template/favicon.svg",
+    avatar: "/assets/imgs/people/avatar2.jpg",
+    banner: "/assets/imgs/page/homepage1/banner.png",
+    rating: 4.9,
+    reviewCount: 384,
+    productsCount: 15,
+    joinedDate: "2024-01-15",
+    phone: "+1 800 900 800",
+    email: "official@buxaa.com",
+    address: "789 Blue Boulevard, Suite 100, New York, NY 10001",
+    description: "Welcome to the official BUXAA store. We build bags and travel accessories engineered for the modern traveler. Travel in style with BUXAA."
+  },
+  {
+    id: 2,
+    name: "Apex Travel Goods",
+    slug: "apex-travel-goods",
+    logo: "/assets/imgs/slider/logo/acer.svg",
+    avatar: "/assets/imgs/people/avatar3.jpg",
+    banner: "/assets/imgs/page/homepage1/banner-hero-2.png",
+    rating: 4.5,
+    reviewCount: 112,
+    productsCount: 8,
+    joinedDate: "2024-05-10",
+    phone: "+1 800 123 456",
+    email: "info@apextravel.com",
+    address: "456 Summit Road, Denver, CO 80202",
+    description: "Apex Travel Goods brings you premium gear designed for rugged outdoor travels, backpacking, and hiking expeditions around the globe."
+  },
+  {
+    id: 3,
+    name: "Elite Bags & Co.",
+    slug: "elite-bags-co",
+    logo: "/assets/imgs/slider/logo/dell.svg",
+    avatar: "/assets/imgs/people/avatar4.jpg",
+    banner: "/assets/imgs/page/homepage1/banner-hero-3.png",
+    rating: 4.7,
+    reviewCount: 94,
+    productsCount: 9,
+    joinedDate: "2025-02-20",
+    phone: "+1 800 987 654",
+    email: "contact@elitebags.com",
+    address: "123 Elegance Lane, San Francisco, CA 94107",
+    description: "Elite Bags specializes in premium leather products, travel bags, and luxury luggage for business travelers who value class and durability."
+  }
+];
