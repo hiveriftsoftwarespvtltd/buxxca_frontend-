@@ -143,23 +143,33 @@ export default function ProductDetail() {
   };
   const currentPrice = getPriceForSize();
 
-  const getStockForSize = () => {
-    if (product.variants && product.variants.length > 0) {
-      const match = product.variants.find(v => v.size === selectedSize);
-      if (match && typeof match.stock === 'number') return match.stock;
-    }
-    return product.stock || 0;
-  };
-  const currentStock = getStockForSize();
-
   const getSkuForSize = () => {
     if (product.variants && product.variants.length > 0) {
       const match = product.variants.find(v => v.size === selectedSize);
       if (match && match.sku) return match.sku;
     }
-    return product.sku || 'BX-GEN-01';
+    return product.sku || `BX-${product.id}`;
   };
   const currentSku = getSkuForSize();
+
+  const getStockForSize = () => {
+    if (product.variants && product.variants.length > 0) {
+      const match = product.variants.find(v => v.size === selectedSize);
+      if (match && match.stock !== undefined) return match.stock;
+    }
+    return product.stock || 0;
+  };
+  const currentStock = getStockForSize();
+
+  const getUsageText = (gender) => {
+    if (!gender) return 'Everyday Carry';
+    const g = gender.toLowerCase();
+    if (g === 'travel') return 'Journey Essential';
+    if (g === 'commute') return 'Daily Commute';
+    if (g === 'custom') return 'Executive Gifting';
+    return gender.charAt(0).toUpperCase() + gender.slice(1);
+  };
+
   const hasOriginalPrice = product.originalPrice !== null && product.originalPrice !== undefined;
   const originalPriceForSize = hasOriginalPrice
     ? (() => {
@@ -256,87 +266,100 @@ export default function ProductDetail() {
                 ))}
               </div>
             )}
-            {/* Added specs block on desktop left side - Dark Premium Theme */}
-            <div className="product-extra-specs" style={{ marginTop: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-              
-              {/* Product Specifications Card */}
-              <div style={{ background: '#0A234D', border: '1px solid rgba(212, 162, 58, 0.25)', borderRadius: '4px', padding: '1.5rem', boxShadow: '0 8px 30px rgba(4, 21, 47, 0.08)' }}>
-                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.1rem', color: '#E3B85A', marginBottom: '1rem', fontWeight: 'bold', borderBottom: '1px solid rgba(255, 255, 255, 0.15)', paddingBottom: '0.5rem', marginTop: 0 }}>Product Specifications</h3>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.85rem' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px dashed rgba(255, 255, 255, 0.1)', paddingBottom: '0.5rem' }}>
-                    <span style={{ color: '#99AABF' }}>SKU</span>
-                    <strong style={{ color: '#FFFFFF' }}>{currentSku}</strong>
-                  </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px dashed rgba(255, 255, 255, 0.1)', paddingBottom: '0.5rem' }}>
-                    <span style={{ color: '#99AABF' }}>Volume / Capacity</span>
-                    <strong style={{ color: '#FFFFFF' }}>
-                      {Array.isArray(product.notes?.heart) ? product.notes.heart.join(', ') : (product.notes?.heart || 'Standard')}
-                    </strong>
-                  </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px dashed rgba(255, 255, 255, 0.1)', paddingBottom: '0.5rem' }}>
-                    <span style={{ color: '#99AABF' }}>Material</span>
-                    <strong style={{ color: '#FFFFFF' }}>
-                      {Array.isArray(product.notes?.top) ? product.notes.top.join(', ') : (product.notes?.top || 'Premium Quality')}
-                    </strong>
-                  </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px dashed rgba(255, 255, 255, 0.1)', paddingBottom: '0.5rem' }}>
-                    <span style={{ color: '#99AABF' }}>Usage</span>
-                    <strong style={{ color: '#FFFFFF' }}>
-                      {product.gender ? (product.gender.charAt(0).toUpperCase() + product.gender.slice(1) + ' Carry') : 'Everyday Carry'}
-                    </strong>
-                  </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '0.25rem' }}>
-                    <span style={{ color: '#99AABF' }}>Availability</span>
-                    {currentStock > 0 ? (
-                      <strong style={{ color: '#52C41A', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                        <CheckCircle2 size={14} /> In Stock ({currentStock} units)
-                      </strong>
-                    ) : (
-                      <strong style={{ color: '#FF4D4F', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                        ✕ Out of Stock
-                      </strong>
-                    )}
-                  </div>
-                </div>
-              </div>
+            
 
-              {/* Service & Warranty Card */}
-              <div style={{ background: '#0A234D', border: '1px solid rgba(212, 162, 58, 0.25)', borderRadius: '4px', padding: '1.5rem', boxShadow: '0 8px 30px rgba(4, 21, 47, 0.08)' }}>
-                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.1rem', color: '#E3B85A', marginBottom: '1rem', fontWeight: 'bold', borderBottom: '1px solid rgba(255, 255, 255, 0.15)', paddingBottom: '0.5rem', marginTop: 0 }}>Service & Warranty</h3>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', fontSize: '0.85rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                    <Truck size={18} style={{ color: '#E3B85A', marginTop: '2px', flexShrink: 0 }} />
-                    <div>
-                      <strong style={{ color: '#FFFFFF', display: 'block' }}>Free Delivery</strong>
-                      <span style={{ color: '#99AABF' }}>Enjoy complimentary delivery on all orders above ₹2,999.</span>
-                    </div>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                    <RotateCcw size={18} style={{ color: '#E3B85A', marginTop: '2px', flexShrink: 0 }} />
-                    <div>
-                      <strong style={{ color: '#FFFFFF', display: 'block' }}>30-Day Easy Returns</strong>
-                      <span style={{ color: '#99AABF' }}>Hassle-free return window. Exchange or get refund within 30 days.</span>
-                    </div>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
-                    <ShieldCheck size={18} style={{ color: '#E3B85A', marginTop: '2px', flexShrink: 0 }} />
-                    <div>
-                      <strong style={{ color: '#FFFFFF', display: 'block' }}>100% Authentic Quality</strong>
-                      <span style={{ color: '#99AABF' }}>Genuine product sourced directly from BUXAA production house.</span>
-                    </div>
-                  </div>
-                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', borderTop: '1px solid rgba(255, 255, 255, 0.15)', paddingTop: '1rem' }}>
-                    <ShieldCheck size={18} style={{ color: '#52C41A', marginTop: '2px', flexShrink: 0 }} />
-                    <div>
-                      <strong style={{ color: '#52C41A', display: 'block' }}>BUXAA 2-Year Warranty</strong>
-                      <span style={{ color: '#99AABF', display: 'block', marginTop: '0.25rem', fontSize: '0.8rem', lineHeight: '1.4' }}>
-                        This item is covered under our 2-year quality warranty against any stitch breaks, zipper malfunctions, or material tears.
-                      </span>
-                    </div>
-                  </div>
-                </div>
+            {/* Left Column Product Specifications & Delivery Highlights */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginTop: '2.5rem', fontFamily: 'Poppins, sans-serif' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#1E1E1E', fontSize: '0.92rem' }}>
+                <Hash size={18} style={{ color: '#D4A23A', flexShrink: 0 }} />
+                <span style={{ fontWeight: 600 }}>SKU:</span>
+                <span style={{ color: '#555555' }}>{currentSku}</span>
               </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#1E1E1E', fontSize: '0.92rem' }}>
+                <Gem size={18} style={{ color: '#D4A23A', flexShrink: 0 }} />
+                <span style={{ fontWeight: 600 }}>Volume/Capacity:</span>
+                <span style={{ color: '#555555' }}>
+                  {Array.isArray(product.notes?.heart) ? product.notes.heart.join(', ') : (product.notes?.heart || product.concentration || '—')}
+                </span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#1E1E1E', fontSize: '0.92rem' }}>
+                <Compass size={18} style={{ color: '#D4A23A', flexShrink: 0 }} />
+                <span style={{ fontWeight: 600 }}>Material:</span>
+                <span style={{ color: '#555555' }}>
+                  {Array.isArray(product.notes?.top) ? product.notes.top.join(', ') : (product.scentFamily || '—')}
+                </span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#1E1E1E', fontSize: '0.92rem' }}>
+                <User size={18} style={{ color: '#D4A23A', flexShrink: 0 }} />
+                <span style={{ fontWeight: 600 }}>Usage:</span>
+                <span style={{ color: '#555555' }}>{getUsageText(product.gender)}</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#1E1E1E', fontSize: '0.92rem' }}>
+                <CheckCircle2 size={18} style={{ color: '#D4A23A', flexShrink: 0 }} />
+                <span style={{ fontWeight: 600 }}>In Stock:</span>
+                <span style={{ color: '#555555' }}>{currentStock} units</span>
+              </div>
+            </div>
 
+            {/* Horizontal Delivery Info Bar */}
+            <div style={{ 
+              display: 'flex', 
+              flexWrap: 'wrap',
+              gap: '1rem',
+              justifyContent: 'space-between', 
+              alignItems: 'center',
+              background: '#F4F5F6', 
+              border: '1px solid #EAEAEA', 
+              borderRadius: '4px', 
+              padding: '1.1rem 1.25rem', 
+              marginTop: '1.5rem', 
+              fontSize: '0.85rem',
+              color: '#333333',
+              fontFamily: 'Poppins, sans-serif'
+            }}>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontWeight: 500 }}>
+                <Truck size={16} style={{ color: '#27AE60', flexShrink: 0 }} /> Free delivery above ₹2,999
+              </span>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontWeight: 500 }}>
+                <RotateCcw size={16} style={{ color: '#A67C24', flexShrink: 0 }} /> 30-day easy returns
+              </span>
+              <span style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontWeight: 500 }}>
+                <ShieldCheck size={16} style={{ color: '#27AE60', flexShrink: 0 }} /> 100% authentic
+              </span>
+            </div>
+
+            {/* Quality & Warranty Guarantee Card */}
+            <div style={{ 
+              display: 'flex', 
+              gap: '0.75rem', 
+              padding: '1.1rem 1.25rem', 
+              background: 'rgba(201, 168, 76, 0.04)', 
+              borderRadius: '4px', 
+              border: '1px dashed #D4A23A',
+              borderLeft: '4px solid #B38F36',
+              fontSize: '0.85rem', 
+              lineHeight: '1.6',
+              marginTop: '1.5rem',
+              alignItems: 'flex-start',
+              fontFamily: 'Poppins, sans-serif'
+            }}>
+              <ShieldCheck size={20} style={{ color: '#B38F36', marginTop: '2px', flexShrink: 0 }} />
+              <div>
+                <span style={{ 
+                  fontWeight: 700, 
+                  textTransform: 'uppercase', 
+                  fontSize: '0.75rem', 
+                  letterSpacing: '0.08em', 
+                  color: '#B38F36', 
+                  display: 'block', 
+                  marginBottom: '0.25rem' 
+                }}>
+                  BUXAA 2-YEAR WARRANTY
+                </span>
+                <span style={{ color: '#333333', fontWeight: 500, fontSize: '0.85rem' }}>
+                  This item is covered under our 2-year quality warranty against any stitch breaks, zipper malfunctions, or material tears.
+                </span>
+              </div>
             </div>
           </div>
 
@@ -414,55 +437,7 @@ export default function ProductDetail() {
               Buy Now → Go to Cart
             </button>
 
-            {/* Product Meta */}
-            <div className="product-meta">
-              <span className="flex items-center gap-1.5"><Hash size={14} className="text-[var(--gold)]" /> <strong>SKU:</strong> {product.sku || `BX-${product.id}`}</span>
-              <span className="flex items-center gap-1.5"><Gem size={14} className="text-[var(--gold)]" /> <strong>Volume/Capacity:</strong> {product.concentration || 'One Size'}</span>
-              <span className="flex items-center gap-1.5"><Compass size={14} className="text-[var(--gold)]" /> <strong>Material:</strong> {product.scentFamily ? (product.scentFamily.charAt(0).toUpperCase()+product.scentFamily.slice(1)) : ''}</span>
-              <span className="flex items-center gap-1.5"><User size={14} className="text-[var(--gold)]" /> <strong>Usage:</strong> {product.gender ? (product.gender.charAt(0).toUpperCase()+product.gender.slice(1)) : ''}</span>
-              <span className="flex items-center gap-1.5"><CheckCircle2 size={14} className="text-[var(--gold)]" /> <strong>In Stock:</strong> {product.stock} units</span>
-            </div>
 
-            {/* Delivery Info */}
-            <div className="delivery-info-container" style={{ background: 'var(--ivory)', borderRadius: '4px', border: '1px solid var(--border)', fontSize: '0.82rem', marginBottom: '1.25rem' }}>
-              <span className="delivery-info-item"><Truck size={14} className="text-[#27AE60]" style={{ flexShrink: 0 }} /> Free delivery above ₹2,999</span>
-              <span className="delivery-info-item"><RotateCcw size={14} className="text-[var(--gold-dark)]" style={{ flexShrink: 0 }} /> 30-day easy returns</span>
-              <span className="delivery-info-item"><ShieldCheck size={14} className="text-[#27AE60]" style={{ flexShrink: 0 }} /> 100% authentic</span>
-            </div>
-
-            {/* Quality & Warranty Guarantee */}
-            <div style={{ 
-              display: 'flex', 
-              gap: '0.75rem', 
-              padding: '1.1rem 1.25rem', 
-              background: 'rgba(201, 168, 76, 0.06)', 
-              borderRadius: '6px', 
-              border: '1px dashed var(--gold)',
-              borderLeft: '4px solid var(--gold)',
-              fontSize: '0.85rem', 
-              lineHeight: '1.6',
-              marginBottom: '2rem',
-              alignItems: 'flex-start',
-              boxShadow: '0 4px 15px rgba(26, 18, 8, 0.02)'
-            }}>
-              <ShieldCheck size={18} style={{ color: 'var(--gold-dark)', marginTop: '2px', flexShrink: 0 }} />
-              <div>
-                <span style={{ 
-                  fontWeight: 700, 
-                  textTransform: 'uppercase', 
-                  fontSize: '0.72rem', 
-                  letterSpacing: '0.08em', 
-                  color: 'var(--gold-dark)', 
-                  display: 'block', 
-                  marginBottom: '0.25rem' 
-                }}>
-                  BUXAA 2-Year Warranty
-                </span>
-                <span style={{ color: 'var(--text-mid)', fontWeight: 500, fontSize: '0.83rem' }}>
-                  This item is covered under our 2-year quality warranty against any stitch breaks, zipper malfunctions, or material tears.
-                </span>
-              </div>
-            </div>
 
             {/* Tabs */}
             <div className="product-tabs">

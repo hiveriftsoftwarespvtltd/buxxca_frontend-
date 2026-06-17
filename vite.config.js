@@ -7,8 +7,8 @@ export default defineConfig({
     port: 5173,
     proxy: {
       "/api": {
-        target: 'http://localhost:9007',
-        // target: "https://buxaa.in/buxaa_api",
+        // target: 'http://localhost:9007',
+        target: "https://buxaa.in/buxaa_api",
         changeOrigin: true,
       },
     },
