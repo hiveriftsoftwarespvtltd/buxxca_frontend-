@@ -142,6 +142,24 @@ export default function ProductDetail() {
     return basePrice;
   };
   const currentPrice = getPriceForSize();
+
+  const getStockForSize = () => {
+    if (product.variants && product.variants.length > 0) {
+      const match = product.variants.find(v => v.size === selectedSize);
+      if (match && typeof match.stock === 'number') return match.stock;
+    }
+    return product.stock || 0;
+  };
+  const currentStock = getStockForSize();
+
+  const getSkuForSize = () => {
+    if (product.variants && product.variants.length > 0) {
+      const match = product.variants.find(v => v.size === selectedSize);
+      if (match && match.sku) return match.sku;
+    }
+    return product.sku || 'BX-GEN-01';
+  };
+  const currentSku = getSkuForSize();
   const hasOriginalPrice = product.originalPrice !== null && product.originalPrice !== undefined;
   const originalPriceForSize = hasOriginalPrice
     ? (() => {
@@ -247,25 +265,37 @@ export default function ProductDetail() {
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.85rem' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px dashed rgba(255, 255, 255, 0.1)', paddingBottom: '0.5rem' }}>
                     <span style={{ color: '#99AABF' }}>SKU</span>
-                    <strong style={{ color: '#FFFFFF' }}>BX-TRV-05</strong>
+                    <strong style={{ color: '#FFFFFF' }}>{currentSku}</strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px dashed rgba(255, 255, 255, 0.1)', paddingBottom: '0.5rem' }}>
                     <span style={{ color: '#99AABF' }}>Volume / Capacity</span>
-                    <strong style={{ color: '#FFFFFF' }}>45L to 85L Expandable</strong>
+                    <strong style={{ color: '#FFFFFF' }}>
+                      {Array.isArray(product.notes?.heart) ? product.notes.heart.join(', ') : (product.notes?.heart || 'Standard')}
+                    </strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px dashed rgba(255, 255, 255, 0.1)', paddingBottom: '0.5rem' }}>
                     <span style={{ color: '#99AABF' }}>Material</span>
-                    <strong style={{ color: '#FFFFFF' }}>Polycarbonate</strong>
+                    <strong style={{ color: '#FFFFFF' }}>
+                      {Array.isArray(product.notes?.top) ? product.notes.top.join(', ') : (product.notes?.top || 'Premium Quality')}
+                    </strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px dashed rgba(255, 255, 255, 0.1)', paddingBottom: '0.5rem' }}>
                     <span style={{ color: '#99AABF' }}>Usage</span>
-                    <strong style={{ color: '#FFFFFF' }}>Journey Essential</strong>
+                    <strong style={{ color: '#FFFFFF' }}>
+                      {product.gender ? (product.gender.charAt(0).toUpperCase() + product.gender.slice(1) + ' Carry') : 'Everyday Carry'}
+                    </strong>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '0.25rem' }}>
                     <span style={{ color: '#99AABF' }}>Availability</span>
-                    <strong style={{ color: '#52C41A', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
-                      <CheckCircle2 size={14} /> In Stock (35 units)
-                    </strong>
+                    {currentStock > 0 ? (
+                      <strong style={{ color: '#52C41A', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                        <CheckCircle2 size={14} /> In Stock ({currentStock} units)
+                      </strong>
+                    ) : (
+                      <strong style={{ color: '#FF4D4F', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                        ✕ Out of Stock
+                      </strong>
+                    )}
                   </div>
                 </div>
               </div>
