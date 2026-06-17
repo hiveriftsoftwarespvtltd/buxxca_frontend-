@@ -1,0 +1,130 @@
+[
+  {
+    "id": "BUX-2408",
+    "customer": "saif saif",
+    "email": "saif@gmail.com",
+    "date": "2 Jun 2026",
+    "items": 6,
+    "itemsDetails": [
+      {
+        "id": 3,
+        "name": "Blossom Rain",
+        "size": "50ml",
+        "price": 3499,
+        "quantity": 1,
+        "img": "images/prod-blossom.png"
+      },
+      {
+        "id": 1,
+        "name": "Rose Mystique",
+        "size": "50ml",
+        "price": 4999,
+        "quantity": 4,
+        "img": "images/prod-rose.png"
+      },
+      {
+        "id": 2,
+        "name": "Oud Royale",
+        "size": "100ml",
+        "price": 7999,
+        "quantity": 1,
+        "img": "images/prod-oud.png"
+      }
+    ],
+    "total": 37213,
+    "status": "pending",
+    "payment": "pending",
+    "city": "noida ",
+    "address": "noida , noida , Uttar Pradesh - 201301"
+  },
+  {
+    "id": "BUX-2407",
+    "customer": "Ravinder Dhillon",
+    "email": "admin@buxaa.com",
+    "date": "28 May 2026",
+    "items": 1,
+    "itemsDetails": [
+      {
+        "id": 1,
+        "name": "Rose Mystique",
+        "brand": "BUXAA",
+        "price": 4999,
+        "img": "images/prod-rose.png",
+        "size": "50ml",
+        "quantity": 1,
+        "slug": "rose-mystique"
+      }
+    ],
+    "total": 5899,
+    "status": "delivered",
+    "payment": "paid",
+    "city": "ahd",
+    "address": "vpo sherpur teh pataudi, ahd, Haryana - 122502"
+  },
+  {
+    "id": "BUX-2401",
+    "customer": "Priya Sharma",
+    "email": "priya@gmail.com",
+    "date": "28 May 2024",
+    "items": 2,
+    "total": 9998,
+    "status": "delivered",
+    "payment": "paid",
+    "city": "Mumbai"
+  },
+  {
+    "id": "BUX-2402",
+    "customer": "Arjun Mehta",
+    "email": "arjun@gmail.com",
+    "date": "27 May 2024",
+    "items": 1,
+    "total": 7999,
+    "status": "shipped",
+    "payment": "paid",
+    "city": "Delhi"
+  },
+  {
+    "id": "BUX-2403",
+    "customer": "Kavya Reddy",
+    "email": "kavya@gmail.com",
+    "date": "27 May 2024",
+    "items": 3,
+    "total": 16497,
+    "status": "processing",
+    "payment": "paid",
+    "city": "Bangalore"
+  },
+  {
+    "id": "BUX-2404",
+    "customer": "Rohan Gupta",
+    "email": "rohan@gmail.com",
+    "date": "26 May 2024",
+    "items": 1,
+    "total": 3499,
+    "status": "pending",
+    "payment": "pending",
+    "city": "Pune"
+  },
+  {
+    "id": "BUX-2405",
+    "customer": "Sneha Patel",
+    "email": "sneha@gmail.com",
+    "date": "25 May 2024",
+    "items": 2,
+    "total": 12498,
+    "status": "delivered",
+    "payment": "paid",
+    "city": "Ahmedabad"
+  },
+  {
+    "id": "BUX-2406",
+    "customer": "Vikram Singh",
+    "email": "vikram@gmail.com",
+    "date": "24 May 2024",
+    "items": 1,
+    "total": 2999,
+    "status": "cancelled",
+    "payment": "refunded",
+    "city": "Jaipur"
+  }
+]

@@ -7,24 +7,36 @@ export default {
   theme: {
     extend: {
       colors: {
-        brand: {
-          primary: '#1A3DAA',   // Deep royal blue
-          gold:    '#C9A84C',   // Metallic gold
-          dark:    '#111827',   // Primary text
-          muted:   '#6B7280',   // Secondary text, placeholders
-          light:   '#F3F4F6',   // Light backgrounds, cards
-          border:  '#E5E7EB',   // Dividers, borders
+        gold: {
+          DEFAULT: '#C9A84C',
+          light: '#E8C97A',
+          dark: '#8B6914',
+          pale: '#F5E9C8',
+          shine: '#FFE08A',
         },
+        ivory: '#FFFDF7',
+        cream: '#FAF6EE',
+        'warm-gray': '#F0EBE1',
+        text: {
+          dark: '#1A1208',
+          mid: '#4A3B1F',
+          light: '#8A7A5A',
+          pale: '#B8A88A',
+        },
+        border: '#E8DFC8',
       },
       fontFamily: {
-        sans: ['"DM Sans"', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+        sans: ['Poppins', 'sans-serif'],
+        cormorant: ['Cormorant Garamond', 'serif'],
+      },
+      transitionTimingFunction: {
+        'luxury': 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
     },
   },
+  plugins: [],
   corePlugins: {
     preflight: false,
-  },
-  plugins: [
-    require('tailwind-scrollbar'),
-  ],
+  }
 }

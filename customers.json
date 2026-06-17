@@ -1,0 +1,82 @@
+[
+  {
+    "id": 10,
+    "name": "Ravinder Dhilloon",
+    "email": "rs5045280@gmail.com",
+    "phone": "8814930229",
+    "city": "Mumbai",
+    "joined": "29 May 2026"
+  },
+  {
+    "id": 9,
+    "name": "Ravinder Dhillon",
+    "email": "hiverift@gmail.com",
+    "phone": "+918814930229",
+    "city": "Mumbai",
+    "joined": "29 May 2026"
+  },
+  {
+    "id": 8,
+    "name": "Amit Patel",
+    "email": "amit@gmail.com",
+    "phone": "+91 99999 88888",
+    "city": "Mumbai",
+    "joined": "28 May 2026"
+  },
+  {
+    "id": 1,
+    "name": "Priya Sharma",
+    "email": "priya@gmail.com",
+    "phone": "+91 98765 43210",
+    "city": "Mumbai",
+    "joined": "28 May 2024"
+  },
+  {
+    "id": 2,
+    "name": "Arjun Mehta",
+    "email": "arjun@gmail.com",
+    "phone": "+91 98765 43211",
+    "city": "Delhi",
+    "joined": "27 May 2024"
+  },
+  {
+    "id": 3,
+    "name": "Kavya Reddy",
+    "email": "kavya@gmail.com",
+    "phone": "+91 98765 43212",
+    "city": "Bangalore",
+    "joined": "27 May 2024"
+  },
+  {
+    "id": 4,
+    "name": "Rohan Gupta",
+    "email": "rohan@gmail.com",
+    "phone": "+91 98765 43213",
+    "city": "Pune",
+    "joined": "26 May 2024"
+  },
+  {
+    "id": 5,
+    "name": "Sneha Patel",
+    "email": "sneha@gmail.com",
+    "phone": "+91 98765 43214",
+    "city": "Ahmedabad",
+    "joined": "25 May 2024"
+  },
+  {
+    "id": 6,
+    "name": "Vikram Singh",
+    "email": "vikram@gmail.com",
+    "phone": "+91 98765 43215",
+    "city": "Jaipur",
+    "joined": "24 May 2024"
+  },
+  {
+    "id": 7,
+    "name": "Ravinder Dhillon",
+    "email": "admin@buxaa.com",
+    "phone": "+91 98765 43216",
+    "city": "ahd",
+    "joined": "28 May 2026"
+  }
+]

@@ -1,133 +1,117 @@
-import React, { createContext, useState, useEffect, useMemo } from "react";
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useToast } from './ToastContext';
 
-export const CartContext = createContext();
+const CartContext = createContext(null);
 
 export const CartProvider = ({ children }) => {
-  const [items, setItems] = useState(() => {
-    const saved = localStorage.getItem("buxaa_cart");
-    return saved ? JSON.parse(saved) : [];
+  const [cartItems, setCartItems] = useState(() => {
+    try {
+      const stored = localStorage.getItem('buxaa-cart');
+      return stored ? JSON.parse(stored) : [];
+    } catch {
+      return [];
+    }
   });
 
-  const [coupon, setCoupon] = useState(() => {
-    const saved = localStorage.getItem("buxaa_coupon");
-    return saved ? JSON.parse(saved) : null;
+  const [appliedCoupon, setAppliedCoupon] = useState(() => {
+    try {
+      const stored = localStorage.getItem('buxaa-applied-coupon');
+      return stored ? JSON.parse(stored) : null;
+    } catch {
+      return null;
+    }
   });
 
-  const [discount, setDiscount] = useState(() => {
-    const saved = localStorage.getItem("buxaa_discount");
-    return saved ? parseFloat(saved) : 0;
-  });
+  const { showToast } = useToast();
 
   useEffect(() => {
-    localStorage.setItem("buxaa_cart", JSON.stringify(items));
-  }, [items]);
+    localStorage.setItem('buxaa-cart', JSON.stringify(cartItems));
+  }, [cartItems]);
 
   useEffect(() => {
-    localStorage.setItem("buxaa_coupon", JSON.stringify(coupon));
-    localStorage.setItem("buxaa_discount", discount.toString());
-  }, [coupon, discount]);
+    if (appliedCoupon) {
+      localStorage.setItem('buxaa-applied-coupon', JSON.stringify(appliedCoupon));
+    } else {
+      localStorage.removeItem('buxaa-applied-coupon');
+    }
+  }, [appliedCoupon]);
 
-  const addItem = (product, qty = 1, variant = "") => {
-    setItems((prev) => {
-      const existingIndex = prev.findIndex(
-        (item) => item.id === product.id && item.variant === variant
-      );
-
-      if (existingIndex > -1) {
-        const updated = [...prev];
-        updated[existingIndex].qty += qty;
-        return updated;
+  const addToCart = (product, size, quantity = 1) => {
+    setCartItems(prev => {
+      const existingIdx = prev.findIndex(item => item.id === product.id && item.size === size);
+      if (existingIdx !== -1) {
+        const nextItems = [...prev];
+        nextItems[existingIdx].quantity += quantity;
+        showToast(`${product.name} quantity updated! 🛍️`, '🛍️');
+        return nextItems;
       } else {
-        return [
-          ...prev,
-          {
-            id: product.id,
-            name: product.name,
-            price: product.price,
-            image: product.images ? product.images[0] : "",
-            variant: variant,
-            qty: qty
-          }
-        ];
+        showToast(`${product.name} added to cart! 🛍️`, '🛍️');
+        return [...prev, {
+          id: product.id,
+          name: product.name,
+          brand: product.brand,
+          price: product.price,
+          img: product.img,
+          size,
+          quantity,
+          slug: product.slug
+        }];
       }
     });
   };
 
-  const removeItem = (id, variant = "") => {
-    setItems((prev) => prev.filter((item) => !(item.id === id && item.variant === variant)));
+  const removeFromCart = (id, size) => {
+    setCartItems(prev => prev.filter(item => !(item.id === id && item.size === size)));
+    showToast('Item removed from cart', '✨');
   };
 
-  const updateQty = (id, qty, variant = "") => {
-    if (qty <= 0) {
-      removeItem(id, variant);
-      return;
-    }
-    setItems((prev) =>
-      prev.map((item) =>
-        item.id === id && item.variant === variant ? { ...item, qty: qty } : item
+  const updateQty = (id, size, quantity) => {
+    setCartItems(prev =>
+      prev.map(item =>
+        item.id === id && item.size === size
+          ? { ...item, quantity: Math.max(1, quantity) }
+          : item
       )
     );
   };
 
-  const applyCoupon = (code) => {
-    if (code.toUpperCase() === "BUXAA20") {
-      setCoupon(code.toUpperCase());
-      return { success: true, message: "Coupon applied successfully (20% Off!)" };
-    }
-    return { success: false, message: "Invalid coupon code" };
-  };
-
   const clearCart = () => {
-    setItems([]);
-    setCoupon(null);
-    setDiscount(0);
+    setCartItems([]);
   };
 
-  // derived values
-  const itemCount = useMemo(() => {
-    return items.reduce((acc, item) => acc + item.qty, 0);
-  }, [items]);
+  const getCount = () => cartItems.reduce((acc, item) => acc + item.quantity, 0);
+  const getSubtotal = () => cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
 
-  const subtotal = useMemo(() => {
-    return items.reduce((acc, item) => acc + item.price * item.qty, 0);
-  }, [items]);
+  const subtotal = getSubtotal();
 
-  // Recalculate discount based on subtotal when items or coupon changes
   useEffect(() => {
-    if (coupon === "BUXAA20") {
-      setDiscount(parseFloat((subtotal * 0.20).toFixed(2)));
-    } else {
-      setDiscount(0);
+    if (appliedCoupon && subtotal < appliedCoupon.minSubtotal) {
+      setAppliedCoupon(null);
+      showToast(`Coupon removed: requires minimum subtotal of ₹${appliedCoupon.minSubtotal.toLocaleString('en-IN')}`, '⚠️');
     }
-  }, [subtotal, coupon]);
-
-  const shipping = useMemo(() => {
-    if (subtotal === 0) return 0;
-    return subtotal > 75 ? 0 : 9.99; // Free shipping over $75
-  }, [subtotal]);
-
-  const total = useMemo(() => {
-    return parseFloat((subtotal - discount + shipping).toFixed(2));
-  }, [subtotal, discount, shipping]);
+  }, [subtotal, appliedCoupon]);
 
   return (
-    <CartContext.Provider
-      value={{
-        items,
-        coupon,
-        discount,
-        shipping,
-        itemCount,
-        subtotal,
-        total,
-        addItem,
-        removeItem,
-        updateQty,
-        applyCoupon,
-        clearCart
-      }}
-    >
+    <CartContext.Provider value={{
+      cartItems,
+      addToCart,
+      removeFromCart,
+      updateQty,
+      clearCart,
+      count: getCount(),
+      subtotal,
+      appliedCoupon,
+      setAppliedCoupon
+    }}>
       {children}
     </CartContext.Provider>
   );
+};
+
+export const useCart = () => {
+  const context = useContext(CartContext);
+  if (!context) {
+    throw new Error('useCart must be used within a CartProvider');
+  }
+  return context;
 };

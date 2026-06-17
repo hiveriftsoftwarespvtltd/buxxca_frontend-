@@ -1,35 +1,53 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import { useToast } from './ToastContext';
 
-export const WishlistContext = createContext();
+const WishlistContext = createContext(null);
 
 export const WishlistProvider = ({ children }) => {
-  const [items, setItems] = useState(() => {
-    const saved = localStorage.getItem("buxaa_wishlist");
-    return saved ? JSON.parse(saved) : [];
+  const [wishlist, setWishlist] = useState(() => {
+    try {
+      const stored = localStorage.getItem('buxaa-wishlist');
+      return stored ? JSON.parse(stored) : [];
+    } catch {
+      return [];
+    }
   });
 
-  useEffect(() => {
-    localStorage.setItem("buxaa_wishlist", JSON.stringify(items));
-  }, [items]);
+  const { showToast } = useToast();
 
-  const toggleWishlist = (product) => {
-    setItems((prev) => {
-      const exists = prev.some((item) => item.id === product.id);
-      if (exists) {
-        return prev.filter((item) => item.id !== product.id);
+  useEffect(() => {
+    localStorage.setItem('buxaa-wishlist', JSON.stringify(wishlist));
+  }, [wishlist]);
+
+  const toggleWishlist = (productId) => {
+    let active = false;
+    setWishlist(prev => {
+      const idx = prev.indexOf(productId);
+      if (idx === -1) {
+        showToast('Added to wishlist! ❤️', '❤️');
+        active = true;
+        return [...prev, productId];
       } else {
-        return [...prev, product];
+        showToast('Removed from wishlist', '✨');
+        return prev.filter(id => id !== productId);
       }
     });
+    return active;
   };
 
-  const isWishlisted = (id) => {
-    return items.some((item) => item.id === id);
-  };
+  const hasItem = (productId) => wishlist.includes(productId);
 
   return (
-    <WishlistContext.Provider value={{ items, toggleWishlist, isWishlisted }}>
+    <WishlistContext.Provider value={{ wishlist, toggleWishlist, hasItem, count: wishlist.length }}>
       {children}
     </WishlistContext.Provider>
   );
+};
+
+export const useWishlist = () => {
+  const context = useContext(WishlistContext);
+  if (!context) {
+    throw new Error('useWishlist must be used within a WishlistProvider');
+  }
+  return context;
 };

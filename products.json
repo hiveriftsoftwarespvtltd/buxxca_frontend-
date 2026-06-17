@@ -1,0 +1,996 @@
+[
+  {
+    "id": 1,
+    "sku": "BX-VGY-01",
+    "name": "BUXAA Voyager Backpack",
+    "brand": "BUXAA",
+    "slug": "buxaa-voyager-backpack",
+    "subtitle": "Premium storage voyager backpack designed for modern travelers",
+    "category": "backpacks",
+    "status": "active",
+    "isFeatured": true,
+    "price": 4499,
+    "originalPrice": 4999,
+    "discount": 10,
+    "sizes": [
+      "One Size"
+    ],
+    "selectedSize": "One Size",
+    "variants": [
+      {
+        "size": "One Size",
+        "price": 4499,
+        "stock": 50,
+        "sku": "BX-VGY-01-OS"
+      }
+    ],
+    "notes": {
+      "top": [
+        "Ballistic Polyester"
+      ],
+      "heart": [
+        "32 Liters Capacity"
+      ],
+      "base": [
+        "YKK Zippers, Laptop Compartment up to 16\""
+      ]
+    },
+    "scentFamily": "Polyester",
+    "gender": "travel",
+    "concentration": "32L Capacity",
+    "rating": 5.0,
+    "reviews": 125,
+    "stock": 50,
+    "isNew": false,
+    "isBestseller": true,
+    "img": "https://images.unsplash.com/photo-1575916140120-bfa5c3f1f6c0?w=500&auto=format&fit=crop&q=80",
+    "imgs": [
+      "https://images.unsplash.com/photo-1575916140120-bfa5c3f1f6c0?w=500&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500&auto=format&fit=crop&q=80"
+    ],
+    "description": "<p>The BUXAA Voyager Backpack is your ultimate travel companion. Designed with high-density ballistic polyester, it provides excellent water resistance and durability. Features dedicated compartments for a 16-inch laptop, tablets, travel documents, and clothes. Perfect for week-long business trips or weekend getaways.</p>",
+    "seo": {
+      "title": "BUXAA Voyager Backpack - Travel Backpack",
+      "description": "Discover the premium BUXAA Voyager Backpack. 32L capacity, durable ballistic fabric, fits up to 16\" laptop.",
+      "keywords": [
+        "travel backpack",
+        "business bag",
+        "BUXAA backpack"
+      ],
+      "slug": "buxaa-voyager-backpack",
+      "ogImage": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&auto=format&fit=crop&q=80"
+    }
+  },
+  {
+    "id": 2,
+    "sku": "BX-WKD-02",
+    "name": "BUXAA Weekender Duffel",
+    "brand": "BUXAA",
+    "slug": "buxaa-weekender-duffel",
+    "subtitle": "Spacious and durable weekender duffel for short getaways",
+    "category": "duffel-bags",
+    "status": "active",
+    "isFeatured": true,
+    "price": 3799,
+    "originalPrice": 4499,
+    "discount": 15,
+    "sizes": [
+      "One Size"
+    ],
+    "selectedSize": "One Size",
+    "variants": [
+      {
+        "size": "One Size",
+        "price": 3799,
+        "stock": 30,
+        "sku": "BX-WKD-02-OS"
+      }
+    ],
+    "notes": {
+      "top": [
+        "Premium Canvas / Leather"
+      ],
+      "heart": [
+        "40 Liters Capacity"
+      ],
+      "base": [
+        "Shoe Compartment, Removable Shoulder Strap"
+      ]
+    },
+    "scentFamily": "Canvas & Leather",
+    "gender": "travel",
+    "concentration": "40L Capacity",
+    "rating": 5.0,
+    "reviews": 86,
+    "stock": 30,
+    "isNew": false,
+    "isBestseller": true,
+    "img": "https://images.unsplash.com/photo-1547949003-9792a18a2601?w=500&auto=format&fit=crop&q=80",
+    "imgs": [
+      "https://images.unsplash.com/photo-1547949003-9792a18a2601?w=500&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&auto=format&fit=crop&q=80"
+    ],
+    "description": "<p>A classic duffel with modern organization. The Weekender Duffel features an isolated shoe pocket to keep your clothes clean, water-resistant interior lining, and heavy-duty brass hardware. Crafted from wax-coated heavy-duty canvas and premium vegan leather trims.</p>",
+    "seo": {
+      "title": "BUXAA Weekender Duffel Bag",
+      "description": "Premium 40L travel duffle bag by BUXAA. Includes shoe compartment and premium brass buckles.",
+      "keywords": [
+        "duffle bag",
+        "weekender bag",
+        "travel duffel"
+      ],
+      "slug": "buxaa-weekender-duffel",
+      "ogImage": "https://images.unsplash.com/photo-1547949003-9792a18a2601?w=500&auto=format&fit=crop&q=80"
+    }
+  },
+  {
+    "id": 3,
+    "sku": "BX-EXE-03",
+    "name": "BUXAA Executive Laptop Bag",
+    "brand": "BUXAA",
+    "slug": "buxaa-executive-laptop-bag",
+    "subtitle": "Elegant brief laptop bag designed for business professionals",
+    "category": "business-bags",
+    "status": "active",
+    "isFeatured": true,
+    "price": 3299,
+    "originalPrice": 3800,
+    "discount": 13,
+    "sizes": [
+      "One Size"
+    ],
+    "selectedSize": "One Size",
+    "variants": [
+      {
+        "size": "One Size",
+        "price": 3299,
+        "stock": 25,
+        "sku": "BX-EXE-03-OS"
+      }
+    ],
+    "notes": {
+      "top": [
+        "Genuine Leather Trims / Nylon"
+      ],
+      "heart": [
+        "15 Liters Capacity"
+      ],
+      "base": [
+        "Padded 15.6\" Laptop Sleeve, Luggage Trolley Strap"
+      ]
+    },
+    "scentFamily": "Nylon & Leather",
+    "gender": "commute",
+    "concentration": "15L Capacity",
+    "rating": 5.0,
+    "reviews": 72,
+    "stock": 25,
+    "isNew": true,
+    "isBestseller": false,
+    "img": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&auto=format&fit=crop&q=80",
+    "imgs": [
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&auto=format&fit=crop&q=80"
+    ],
+    "description": "<p>Elevate your everyday office carry. The Executive Laptop Bag blends structured nylon panels with full-grain leather details. Features smart organizing slots for chargers, tablets, and cables, and slides easily onto any rolling suitcase handle.</p>",
+    "seo": {
+      "title": "BUXAA Executive Laptop Briefcase",
+      "description": "Slim professional laptop messenger bag with luggage strap and key hook.",
+      "keywords": [
+        "laptop bag",
+        "office briefcase",
+        "messenger bag"
+      ],
+      "slug": "buxaa-executive-laptop-bag",
+      "ogImage": "https://images.unsplash.com/photo-1508847154043-be12a62861c1?w=500&auto=format&fit=crop&q=80"
+    }
+  },
+  {
+    "id": 4,
+    "sku": "BX-CSB-04",
+    "name": "BUXAA Crossbody Sling Bag",
+    "brand": "BUXAA",
+    "slug": "buxaa-crossbody-sling-bag",
+    "subtitle": "Compact and secure crossbody sling bag for everyday essentials",
+    "category": "sling-bags",
+    "status": "active",
+    "isFeatured": true,
+    "price": 1999,
+    "originalPrice": 2399,
+    "discount": 12,
+    "sizes": [
+      "One Size"
+    ],
+    "selectedSize": "One Size",
+    "variants": [
+      {
+        "size": "One Size",
+        "price": 1999,
+        "stock": 40,
+        "sku": "BX-CSB-04-OS"
+      }
+    ],
+    "notes": {
+      "top": [
+        "Water-resistant Ripstop Nylon"
+      ],
+      "heart": [
+        "6 Liters Capacity"
+      ],
+      "base": [
+        "Anti-theft Hidden Pockets, Magnetic Buckle Strap"
+      ]
+    },
+    "scentFamily": "Nylon",
+    "gender": "commute",
+    "concentration": "6L Capacity",
+    "rating": 5.0,
+    "reviews": 55,
+    "stock": 40,
+    "isNew": false,
+    "isBestseller": false,
+    "img": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500&auto=format&fit=crop&q=80",
+    "imgs": [
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500&auto=format&fit=crop&q=80"
+    ],
+    "description": "<p>A lightweight, quick-access sling built for active city walks and travels. Fits a kindle, phone, keys, wallet, and sunglasses with ease. Features a quick-release magnetic chest buckle and breathable back panel.</p>",
+    "seo": {
+      "title": "BUXAA Crossbody Sling Bag",
+      "description": "Secure, lightweight anti-theft sling bag with magnetic lock.",
+      "keywords": [
+        "sling bag",
+        "crossbody bag",
+        "chest bag"
+      ],
+      "slug": "buxaa-crossbody-sling-bag",
+      "ogImage": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=500&auto=format&fit=crop&q=80"
+    }
+  },
+  {
+    "id": 5,
+    "sku": "BX-TRV-05",
+    "name": "BUXAA Pro Traveler Suitcase",
+    "brand": "BUXAA",
+    "slug": "buxaa-pro-traveler-suitcase",
+    "subtitle": "Premium hard-shell travel case with TSA approved lock",
+    "category": "travel-collection",
+    "status": "active",
+    "isFeatured": true,
+    "price": 8999,
+    "originalPrice": 9999,
+    "discount": 10,
+    "sizes": [
+      "Carry-On",
+      "Check-In"
+    ],
+    "selectedSize": "Carry-On",
+    "variants": [
+      {
+        "size": "Carry-On",
+        "price": 8999,
+        "stock": 20,
+        "sku": "BX-TRV-05-CO"
+      },
+      {
+        "size": "Check-In",
+        "price": 11999,
+        "stock": 15,
+        "sku": "BX-TRV-05-CI"
+      }
+    ],
+    "notes": {
+      "top": [
+        "German Polycarbonate Shell"
+      ],
+      "heart": [
+        "45L to 85L Expandable"
+      ],
+      "base": [
+        "360° Whisper-Quiet Spinners, TSA Integrated Lock"
+      ]
+    },
+    "scentFamily": "Polycarbonate",
+    "gender": "travel",
+    "concentration": "45L / 85L Capacity",
+    "rating": 4.9,
+    "reviews": 118,
+    "stock": 35,
+    "isNew": true,
+    "isBestseller": true,
+    "img": "https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?w=500&auto=format&fit=crop&q=80",
+    "imgs": [
+      "https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?w=500&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1581553674786-636eaa2f1a6b?w=500&auto=format&fit=crop&q=80"
+    ],
+    "description": "<p>Travel effortlessly with the BUXAA Pro Traveler. Built with a tough, lightweight polycarbonate outer shell designed to absorb impacts. High-performance dual spinner wheels roll smoothly over any surface. Complete with compression pads inside to double your packing volume.</p>",
+    "seo": {
+      "title": "BUXAA Pro Traveler Carry-On Suitcase",
+      "description": "Durable polycarbonate suitcase with TSA locks and Japanese Hinomoto spinner wheels.",
+      "keywords": [
+        "suitcase",
+        "luggage",
+        "trolley bag",
+        "BUXAA travel case"
+      ],
+      "slug": "buxaa-pro-traveler-suitcase",
+      "ogImage": "https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?w=500&auto=format&fit=crop&q=80"
+    }
+  },
+  {
+    "id": 6,
+    "sku": "BX-PCH-06",
+    "name": "BUXAA Tech Organizer Pouch",
+    "brand": "BUXAA",
+    "slug": "buxaa-tech-organizer-pouch",
+    "subtitle": "Compact gadget and cable organizer for neat packing",
+    "category": "organizer-pouches",
+    "status": "active",
+    "isFeatured": false,
+    "price": 999,
+    "originalPrice": 1299,
+    "discount": 23,
+    "sizes": [
+      "One Size"
+    ],
+    "selectedSize": "One Size",
+    "variants": [
+      {
+        "size": "One Size",
+        "price": 999,
+        "stock": 60,
+        "sku": "BX-PCH-06-OS"
+      }
+    ],
+    "notes": {
+      "top": [
+        "900D Water-resistant Polyester"
+      ],
+      "heart": [
+        "2.5 Liters Capacity"
+      ],
+      "base": [
+        "Elastic Cable Loops, Mesh Zipper Slots"
+      ]
+    },
+    "scentFamily": "Polyester",
+    "gender": "commute",
+    "concentration": "2.5L Capacity",
+    "rating": 4.8,
+    "reviews": 43,
+    "stock": 60,
+    "isNew": false,
+    "isBestseller": false,
+    "img": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500&auto=format&fit=crop&q=80",
+    "imgs": [
+      "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500&auto=format&fit=crop&q=80"
+    ],
+    "description": "<p>Keep all your cables, chargers, power banks, and memory cards organized in one place. The BUXAA Tech Organizer features an origami-style folding structure to provide maximum packing space within a compact footprint.</p>",
+    "seo": {
+      "title": "BUXAA Tech Organizer Pouch",
+      "description": "Premium tech organizer pouch with elastic loops and zipper pockets.",
+      "keywords": [
+        "tech pouch",
+        "cable organizer",
+        "travel case"
+      ],
+      "slug": "buxaa-tech-organizer-pouch",
+      "ogImage": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500&auto=format&fit=crop&q=80"
+    }
+  },
+  {
+    "id": 7,
+    "sku": "BX-GFT-07",
+    "name": "BUXAA Elite Corporate Gift Set",
+    "brand": "BUXAA",
+    "slug": "buxaa-elite-corporate-gift-set",
+    "subtitle": "Premium dual-gift box including leather organizer & thermal mug",
+    "category": "corporate-gifting",
+    "status": "active",
+    "isFeatured": false,
+    "price": 4999,
+    "originalPrice": 5999,
+    "discount": 16,
+    "sizes": [
+      "One Size"
+    ],
+    "selectedSize": "One Size",
+    "variants": [
+      {
+        "size": "One Size",
+        "price": 4999,
+        "stock": 100,
+        "sku": "BX-GFT-07-OS"
+      }
+    ],
+    "notes": {
+      "top": [
+        "Genuine Leather Accessories"
+      ],
+      "heart": [
+        "Corporate Hardwood Giftbox"
+      ],
+      "base": [
+        "Custom Name Engraving Available"
+      ]
+    },
+    "scentFamily": "Leather",
+    "gender": "custom",
+    "concentration": "Custom Engraving",
+    "rating": 5.0,
+    "reviews": 12,
+    "stock": 100,
+    "isNew": true,
+    "isBestseller": false,
+    "img": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500&auto=format&fit=crop&q=80",
+    "imgs": [
+      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500&auto=format&fit=crop&q=80"
+    ],
+    "description": "<p>A high-end corporate gift set to honor your employees and partners. Includes a handcrafted top-grain leather notebook, a matching slim cardholder, and a double-walled insulated coffee mug. Packed inside an elegant wooden presentation case.</p>",
+    "seo": {
+      "title": "BUXAA Elite Corporate Gifting Sets",
+      "description": "Luxurious leather business diaries, thermal mugs and customized gifts by BUXAA.",
+      "keywords": [
+        "corporate gifting",
+        "executive gift",
+        "customized office gifts"
+      ],
+      "slug": "buxaa-elite-corporate-gift-set",
+      "ogImage": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500&auto=format&fit=crop&q=80"
+    }
+  },
+  {
+    "id": 8,
+    "sku": "BX-PNE-08",
+    "name": "BUXAA Pioneer Hardshell Spinner",
+    "brand": "BUXAA",
+    "slug": "buxaa-pioneer-hardshell-spinner",
+    "subtitle": "German polycarbonate cabin suitcase with dual wheels",
+    "category": "travel-collection",
+    "status": "active",
+    "isFeatured": true,
+    "price": 6499,
+    "originalPrice": 7999,
+    "discount": 18,
+    "sizes": [
+      "Carry-On"
+    ],
+    "selectedSize": "Carry-On",
+    "variants": [
+      {
+        "size": "Carry-On",
+        "price": 6499,
+        "stock": 25,
+        "sku": "BX-PNE-08-CO"
+      }
+    ],
+    "notes": {
+      "top": [
+        "German Polycarbonate"
+      ],
+      "heart": [
+        "38 Liters Capacity"
+      ],
+      "base": [
+        "Hinomoto Silent Spinners, TSA Integrated Lock"
+      ]
+    },
+    "scentFamily": "Polycarbonate",
+    "gender": "travel",
+    "concentration": "38L Capacity",
+    "rating": 5.0,
+    "reviews": 92,
+    "stock": 25,
+    "isNew": true,
+    "isBestseller": false,
+    "img": "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=500&auto=format&fit=crop&q=80",
+    "imgs": [
+      "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=500&auto=format&fit=crop&q=80"
+    ],
+    "description": "<p>A premium lightweight carry-on spinner suitcase made with precision German polycarbonate shell. Includes integrated TSA combination lock, sturdy aluminum trolley handle, and smooth whisper-quiet spinner wheels for effortless travel transitions.</p>",
+    "seo": {
+      "title": "BUXAA Pioneer Hardshell Spinner Luggage",
+      "description": "Premium cabin suitcase with TSA locks and Japanese Hinomoto spinner wheels.",
+      "keywords": [
+        "suitcase",
+        "luggage",
+        "trolley bag"
+      ],
+      "slug": "buxaa-pioneer-hardshell-spinner",
+      "ogImage": "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=500&auto=format&fit=crop&q=80"
+    }
+  },
+  {
+    "id": 9,
+    "sku": "BX-NOM-09",
+    "name": "BUXAA Nomad Travel Duffle Bag",
+    "brand": "BUXAA",
+    "slug": "buxaa-nomad-travel-duffle-bag",
+    "subtitle": "Water-resistant ripstop nylon travel duffle with wet pocket",
+    "category": "travel-collection",
+    "status": "active",
+    "isFeatured": false,
+    "price": 2899,
+    "originalPrice": 3499,
+    "discount": 17,
+    "sizes": [
+      "One Size"
+    ],
+    "selectedSize": "One Size",
+    "variants": [
+      {
+        "size": "One Size",
+        "price": 2899,
+        "stock": 45,
+        "sku": "BX-NOM-09-OS"
+      }
+    ],
+    "notes": {
+      "top": [
+        "Ripstop Nylon"
+      ],
+      "heart": [
+        "35 Liters Capacity"
+      ],
+      "base": [
+        "Wet/Dry Separation Pocket, Shoe Compartment"
+      ]
+    },
+    "scentFamily": "Nylon",
+    "gender": "travel",
+    "concentration": "35L Capacity",
+    "rating": 4.8,
+    "reviews": 54,
+    "stock": 45,
+    "isNew": false,
+    "isBestseller": false,
+    "img": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&auto=format&fit=crop&q=80",
+    "imgs": [
+      "https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&auto=format&fit=crop&q=80"
+    ],
+    "description": "<p>Keep your belongings clean and separated. The Nomad Travel Duffle features a built-in shoe compartment and a specialized wet pocket for swimwear or towels. Crafted from highly water-resistant ripstop nylon fabric.</p>",
+    "seo": {
+      "title": "BUXAA Nomad Travel Duffle Bag",
+      "description": "Spacious sports and travel duffle bag with dedicated shoe and wet compartments.",
+      "keywords": [
+        "duffle bag",
+        "sports duffle",
+        "travel duffel"
+      ],
+      "slug": "buxaa-nomad-travel-duffle-bag",
+      "ogImage": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&auto=format&fit=crop&q=80"
+    }
+  },
+  {
+    "id": 10,
+    "sku": "BX-EXP-10",
+    "name": "BUXAA Explorer Leather Passport Wallet",
+    "brand": "BUXAA",
+    "slug": "buxaa-explorer-leather-passport-wallet",
+    "subtitle": "Full-grain leather passport case with RFID protection",
+    "category": "travel-collection",
+    "status": "active",
+    "isFeatured": false,
+    "price": 1199,
+    "originalPrice": 1499,
+    "discount": 20,
+    "sizes": [
+      "One Size"
+    ],
+    "selectedSize": "One Size",
+    "variants": [
+      {
+        "size": "One Size",
+        "price": 1199,
+        "stock": 80,
+        "sku": "BX-EXP-10-OS"
+      }
+    ],
+    "notes": {
+      "top": [
+        "Genuine Leather"
+      ],
+      "heart": [
+        "RFID Protection Lining"
+      ],
+      "base": [
+        "4 Card Slots, Passport Slot, Boarding Pass Compartment"
+      ]
+    },
+    "scentFamily": "Leather",
+    "gender": "travel",
+    "concentration": "RFID Secure",
+    "rating": 4.9,
+    "reviews": 112,
+    "stock": 80,
+    "isNew": false,
+    "isBestseller": false,
+    "img": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500&auto=format&fit=crop&q=80",
+    "imgs": [
+      "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500&auto=format&fit=crop&q=80"
+    ],
+    "description": "<p>A elegant full-grain leather passport wallet crafted to keep all your essential travel documents organized in one place. Features integrated RFID protection to keep your digital identity secure.</p>",
+    "seo": {
+      "title": "BUXAA Explorer Leather Passport Wallet Case",
+      "description": "Genuine leather travel wallet with RFID blocking slots and card pockets.",
+      "keywords": [
+        "passport wallet",
+        "travel wallet",
+        "leather holder"
+      ],
+      "slug": "buxaa-explorer-leather-passport-wallet",
+      "ogImage": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500&auto=format&fit=crop&q=80"
+    }
+  },
+  {
+    "id": 11,
+    "sku": "BX-HTG-11",
+    "name": "BUXAA Heritage Leather Briefcase",
+    "brand": "BUXAA",
+    "slug": "buxaa-heritage-leather-briefcase",
+    "subtitle": "Full-grain leather office briefcase with laptop slot",
+    "category": "business-bags",
+    "status": "active",
+    "isFeatured": true,
+    "price": 5299,
+    "originalPrice": 5999,
+    "discount": 11,
+    "sizes": [
+      "One Size"
+    ],
+    "selectedSize": "One Size",
+    "variants": [
+      {
+        "size": "One Size",
+        "price": 5299,
+        "stock": 35,
+        "sku": "BX-HTG-11-OS"
+      }
+    ],
+    "notes": {
+      "top": [
+        "Genuine Leather"
+      ],
+      "heart": [
+        "18 Liters Capacity"
+      ],
+      "base": [
+        "Solid Brass Hardware, 15\" Laptop Slot"
+      ]
+    },
+    "scentFamily": "Leather",
+    "gender": "commute",
+    "concentration": "18L Capacity",
+    "rating": 5.0,
+    "reviews": 68,
+    "stock": 35,
+    "isNew": true,
+    "isBestseller": true,
+    "img": "https://images.unsplash.com/photo-1547949003-9792a18a2601?w=500&auto=format&fit=crop&q=80",
+    "imgs": [
+      "https://images.unsplash.com/photo-1547949003-9792a18a2601?w=500&auto=format&fit=crop&q=80"
+    ],
+    "description": "<p>A classic, lifetime-worthy leather briefcase built to age gracefully. Features smart organizational dividers, dedicated padded pockets for electronics, and detachable leather shoulder strap.</p>",
+    "seo": {
+      "title": "BUXAA Heritage Leather Briefcase",
+      "description": "Executive full-grain leather briefcase with brass buckles.",
+      "keywords": [
+        "briefcase",
+        "leather bag",
+        "office bag"
+      ],
+      "slug": "buxaa-heritage-leather-briefcase",
+      "ogImage": "https://images.unsplash.com/photo-1547949003-9792a18a2601?w=500&auto=format&fit=crop&q=80"
+    }
+  },
+  {
+    "id": 12,
+    "sku": "BX-NOM-12",
+    "name": "BUXAA Commuter Slim Messenger Bag",
+    "brand": "BUXAA",
+    "slug": "buxaa-commuter-slim-messenger-bag",
+    "subtitle": "Compact water-resistant shoulder bag for daily office commute",
+    "category": "business-bags",
+    "status": "active",
+    "isFeatured": false,
+    "price": 2499,
+    "originalPrice": 2999,
+    "discount": 16,
+    "sizes": [
+      "One Size"
+    ],
+    "selectedSize": "One Size",
+    "variants": [
+      {
+        "size": "One Size",
+        "price": 2499,
+        "stock": 40,
+        "sku": "BX-NOM-12-OS"
+      }
+    ],
+    "notes": {
+      "top": [
+        "Water-resistant Nylon"
+      ],
+      "heart": [
+        "12 Liters Capacity"
+      ],
+      "base": [
+        "Quick Access Front Pockets, Key-hook"
+      ]
+    },
+    "scentFamily": "Nylon",
+    "gender": "commute",
+    "concentration": "12L Capacity",
+    "rating": 4.7,
+    "reviews": 34,
+    "stock": 40,
+    "isNew": false,
+    "isBestseller": false,
+    "img": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500&auto=format&fit=crop&q=80",
+    "imgs": [
+      "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=500&auto=format&fit=crop&q=80"
+    ],
+    "description": "<p>A lightweight, slim-profile messenger bag designed for minimalists. Perfect for carrying a tablet, documents, chargers, and writing essentials without bulk.</p>",
+    "seo": {
+      "title": "BUXAA Commuter Slim Messenger Bag",
+      "description": "Slim travel and work messenger bag for office essentials.",
+      "keywords": [
+        "messenger bag",
+        "shoulder bag",
+        "office bag"
+      ],
+      "slug": "buxaa-commuter-slim-messenger-bag",
+      "ogImage": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&auto=format&fit=crop&q=80"
+    }
+  },
+  {
+    "id": 13,
+    "sku": "BX-LTP-13",
+    "name": "BUXAA Pro Organizer Laptop Sleeve",
+    "brand": "BUXAA",
+    "slug": "buxaa-pro-organizer-laptop-sleeve",
+    "subtitle": "Padded protective laptop sleeve with accessory compartment",
+    "category": "business-bags",
+    "status": "active",
+    "isFeatured": false,
+    "price": 1499,
+    "originalPrice": 1999,
+    "discount": 25,
+    "sizes": [
+      "14 Inch",
+      "16 Inch"
+    ],
+    "selectedSize": "14 Inch",
+    "variants": [
+      {
+        "size": "14 Inch",
+        "price": 1499,
+        "stock": 50,
+        "sku": "BX-LTP-13-14"
+      },
+      {
+        "size": "16 Inch",
+        "price": 1699,
+        "stock": 45,
+        "sku": "BX-LTP-13-16"
+      }
+    ],
+    "notes": {
+      "top": [
+        "Neoprene & Polyester"
+      ],
+      "heart": [
+        "Waterproof Shell"
+      ],
+      "base": [
+        "Fleece Scratch-proof Inner Lining, Front Cable Pocket"
+      ]
+    },
+    "scentFamily": "Polyester",
+    "gender": "commute",
+    "concentration": "360° Protection",
+    "rating": 4.9,
+    "reviews": 89,
+    "stock": 95,
+    "isNew": false,
+    "isBestseller": false,
+    "img": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&auto=format&fit=crop&q=80",
+    "imgs": [
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&auto=format&fit=crop&q=80"
+    ],
+    "description": "<p>Keep your laptop secure from bumps and scratches. The Pro Organizer Sleeve offers 360-degree protection, cushioned corners, and a spacious front pocket to store mouse, chargers, and pens.</p>",
+    "seo": {
+      "title": "BUXAA Pro Laptop Sleeve Case",
+      "description": "Shockproof notebook sleeve case with front zipper pockets.",
+      "keywords": [
+        "laptop sleeve",
+        "laptop case",
+        "protective sleeve"
+      ],
+      "slug": "buxaa-pro-organizer-laptop-sleeve",
+      "ogImage": "https://images.unsplash.com/photo-1508847154043-be12a62861c1?w=500&auto=format&fit=crop&q=80"
+    }
+  },
+  {
+    "id": 14,
+    "sku": "BX-PLN-14",
+    "name": "BUXAA Signature Executive Planner Set",
+    "brand": "BUXAA",
+    "slug": "buxaa-signature-executive-planner-set",
+    "subtitle": "Leather organizer notebook and premium rollerball pen gift set",
+    "category": "corporate-gifting",
+    "status": "active",
+    "isFeatured": false,
+    "price": 1999,
+    "originalPrice": 2499,
+    "discount": 20,
+    "sizes": [
+      "One Size"
+    ],
+    "selectedSize": "One Size",
+    "variants": [
+      {
+        "size": "One Size",
+        "price": 1999,
+        "stock": 150,
+        "sku": "BX-PLN-14-OS"
+      }
+    ],
+    "notes": {
+      "top": [
+        "PU Leather Cover"
+      ],
+      "heart": [
+        "A5 Size Refillable Binder"
+      ],
+      "base": [
+        "Engraved Metal Pen, Card Slots & Pen Loop"
+      ]
+    },
+    "scentFamily": "Leather",
+    "gender": "custom",
+    "concentration": "A5 Refillable Planner",
+    "rating": 4.8,
+    "reviews": 24,
+    "stock": 150,
+    "isNew": true,
+    "isBestseller": false,
+    "img": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500&auto=format&fit=crop&q=80",
+    "imgs": [
+      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500&auto=format&fit=crop&q=80"
+    ],
+    "description": "<p>A high-quality binder notebook planner with premium cardholders and refitting loops, bundled with an elegant signature BUXAA pen. Customizable cover engraving available for corporate orders.</p>",
+    "seo": {
+      "title": "BUXAA Executive Planner Pen Gift Set",
+      "description": "Refillable office diary organizer set for corporate gifting.",
+      "keywords": [
+        "planner",
+        "corporate diary",
+        "notebook set"
+      ],
+      "slug": "buxaa-signature-executive-planner-set",
+      "ogImage": "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500&auto=format&fit=crop&q=80"
+    }
+  },
+  {
+    "id": 15,
+    "sku": "BX-MAT-15",
+    "name": "BUXAA Deluxe Desk Mat Organizer",
+    "brand": "BUXAA",
+    "slug": "buxaa-deluxe-desk-mat-organizer",
+    "subtitle": "Water-resistant vegan leather double-sided desk blotter mat",
+    "category": "corporate-gifting",
+    "status": "active",
+    "isFeatured": false,
+    "price": 2999,
+    "originalPrice": 3499,
+    "discount": 14,
+    "sizes": [
+      "Large"
+    ],
+    "selectedSize": "Large",
+    "variants": [
+      {
+        "size": "Large",
+        "price": 2999,
+        "stock": 70,
+        "sku": "BX-MAT-15-L"
+      }
+    ],
+    "notes": {
+      "top": [
+        "Vegan Leather"
+      ],
+      "heart": [
+        "90cm x 45cm Dimensions"
+      ],
+      "base": [
+        "Double-sided Color, Waterproof Finish"
+      ]
+    },
+    "scentFamily": "Leather",
+    "gender": "custom",
+    "concentration": "Desk Protection Mat",
+    "rating": 5.0,
+    "reviews": 16,
+    "stock": 70,
+    "isNew": false,
+    "isBestseller": false,
+    "img": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500&auto=format&fit=crop&q=80",
+    "imgs": [
+      "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500&auto=format&fit=crop&q=80"
+    ],
+    "description": "<p>Organize your office desk in style. A heavy-duty, double-sided vegan leather mat that provides smooth mouse tracking, protects your hardwood desk, and matches any modern corporate aesthetic.</p>",
+    "seo": {
+      "title": "BUXAA Deluxe Leather Desk Blotter Mat",
+      "description": "Double-sided premium mouse pad and keyboard protective mat.",
+      "keywords": [
+        "desk mat",
+        "desk pad",
+        "office desk organizer"
+      ],
+      "slug": "buxaa-deluxe-desk-mat-organizer",
+      "ogImage": "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=500&auto=format&fit=crop&q=80"
+    }
+  },
+  {
+    "id": 16,
+    "sku": "BX-GFT-16",
+    "name": "BUXAA Premium Leather Travel Gift Set",
+    "brand": "BUXAA",
+    "slug": "buxaa-premium-leather-travel-gift-set",
+    "subtitle": "Luxury gifting bundle of leather passport case & luggage tag",
+    "category": "corporate-gifting",
+    "status": "active",
+    "isFeatured": false,
+    "price": 3999,
+    "originalPrice": 4500,
+    "discount": 11,
+    "sizes": [
+      "One Size"
+    ],
+    "selectedSize": "One Size",
+    "variants": [
+      {
+        "size": "One Size",
+        "price": 3999,
+        "stock": 80,
+        "sku": "BX-GFT-16-OS"
+      }
+    ],
+    "notes": {
+      "top": [
+        "Genuine Leather"
+      ],
+      "heart": [
+        "RFID Passport case"
+      ],
+      "base": [
+        "Custom Logo Embossing Available"
+      ]
+    },
+    "scentFamily": "Leather",
+    "gender": "custom",
+    "concentration": "Travel Gifting Set",
+    "rating": 4.9,
+    "reviews": 14,
+    "stock": 80,
+    "isNew": false,
+    "isBestseller": false,
+    "img": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&auto=format&fit=crop&q=80",
+    "imgs": [
+      "https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&auto=format&fit=crop&q=80"
+    ],
+    "description": "<p>Honour your executives with custom travel sets. The gift set features a genuine leather RFID blocking passport holder and a matching luggage tag with privacy window, packed inside a premium matte gift box.</p>",
+    "seo": {
+      "title": "BUXAA Premium Leather Travel Gift Sets",
+      "description": "Premium travel accessories customized bundle box sets by BUXAA.",
+      "keywords": [
+        "travel gift set",
+        "corporate gift tags",
+        "leather passport case"
+      ],
+      "slug": "buxaa-premium-leather-travel-gift-set",
+      "ogImage": "https://images.unsplash.com/photo-1544816155-12df9643f363?w=500&auto=format&fit=crop&q=80"
+    }
+  }
+]
