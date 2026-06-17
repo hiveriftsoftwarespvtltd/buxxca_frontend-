@@ -238,6 +238,76 @@ export default function ProductDetail() {
                 ))}
               </div>
             )}
+            {/* Added specs block on desktop left side */}
+            <div className="product-extra-specs" style={{ marginTop: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              
+              {/* Product Specifications Card */}
+              <div style={{ background: '#FFFFFF', border: '1px solid var(--border)', borderRadius: '4px', padding: '1.5rem' }}>
+                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.1rem', color: 'var(--text-dark)', marginBottom: '1rem', fontWeight: 'bold', borderBottom: '1px solid var(--border)', paddingBottom: '0.5rem', marginTop: 0 }}>Product Specifications</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', fontSize: '0.85rem' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px dashed var(--border)', paddingBottom: '0.5rem' }}>
+                    <span style={{ color: 'var(--text-light)' }}>SKU</span>
+                    <strong style={{ color: 'var(--text-dark)' }}>BX-TRV-05</strong>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px dashed var(--border)', paddingBottom: '0.5rem' }}>
+                    <span style={{ color: 'var(--text-light)' }}>Volume / Capacity</span>
+                    <strong style={{ color: 'var(--text-dark)' }}>45L to 85L Expandable</strong>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px dashed var(--border)', paddingBottom: '0.5rem' }}>
+                    <span style={{ color: 'var(--text-light)' }}>Material</span>
+                    <strong style={{ color: 'var(--text-dark)' }}>Polycarbonate</strong>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px dashed var(--border)', paddingBottom: '0.5rem' }}>
+                    <span style={{ color: 'var(--text-light)' }}>Usage</span>
+                    <strong style={{ color: 'var(--text-dark)' }}>Journey Essential</strong>
+                  </div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', paddingBottom: '0.25rem' }}>
+                    <span style={{ color: 'var(--text-light)' }}>Availability</span>
+                    <strong style={{ color: '#27AE60', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+                      <CheckCircle2 size={14} /> In Stock (35 units)
+                    </strong>
+                  </div>
+                </div>
+              </div>
+
+              {/* Service & Warranty Card */}
+              <div style={{ background: '#FFFFFF', border: '1px solid var(--border)', borderRadius: '4px', padding: '1.5rem' }}>
+                <h3 style={{ fontFamily: 'Playfair Display, serif', fontSize: '1.1rem', color: 'var(--text-dark)', marginBottom: '1rem', fontWeight: 'bold', borderBottom: '1px solid var(--border)', paddingBottom: '0.5rem', marginTop: 0 }}>Service & Warranty</h3>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', fontSize: '0.85rem' }}>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                    <Truck size={18} style={{ color: 'var(--gold)', marginTop: '2px', flexShrink: 0 }} />
+                    <div>
+                      <strong style={{ color: 'var(--text-dark)', display: 'block' }}>Free Delivery</strong>
+                      <span style={{ color: 'var(--text-light)' }}>Enjoy complimentary delivery on all orders above ₹2,999.</span>
+                    </div>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                    <RotateCcw size={18} style={{ color: 'var(--gold)', marginTop: '2px', flexShrink: 0 }} />
+                    <div>
+                      <strong style={{ color: 'var(--text-dark)', display: 'block' }}>30-Day Easy Returns</strong>
+                      <span style={{ color: 'var(--text-light)' }}>Hassle-free return window. Exchange or get refund within 30 days.</span>
+                    </div>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
+                    <ShieldCheck size={18} style={{ color: 'var(--gold)', marginTop: '2px', flexShrink: 0 }} />
+                    <div>
+                      <strong style={{ color: 'var(--text-dark)', display: 'block' }}>100% Authentic Quality</strong>
+                      <span style={{ color: 'var(--text-light)' }}>Genuine product sourced directly from BUXAA production house.</span>
+                    </div>
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem', borderTop: '1px solid var(--border)', paddingTop: '1rem' }}>
+                    <ShieldCheck size={18} style={{ color: '#27AE60', marginTop: '2px', flexShrink: 0 }} />
+                    <div>
+                      <strong style={{ color: '#27AE60', display: 'block' }}>BUXAA 2-Year Warranty</strong>
+                      <span style={{ color: 'var(--text-light)', display: 'block', marginTop: '0.25rem', fontSize: '0.8rem', lineHeight: '1.4' }}>
+                        This item is covered under our 2-year quality warranty against any stitch breaks, zipper malfunctions, or material tears.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
 
           {/* Info */}
